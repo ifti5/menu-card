@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Web Application Design</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     body {
       background: url('./AdobeStock_318929874_Preview.jpeg') no-repeat center center fixed;
@@ -12,18 +11,39 @@
       font-family: Arial, sans-serif;
     }
     .container {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 227, 227, 0.795);
       padding: 30px;
       border-radius: 15px;
       margin-top: 50px;
       max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    h2 {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
     }
     .item-card {
-      border: 2px solid #ccc;
+      border: 2px solid #535353;
       border-radius: 10px;
       padding: 15px;
       text-align: center;
+      margin-bottom: 20px;
+      width: 28%;
+ 
     }
+.item-card:hover{
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
     .item-card img {
       width: 100%;
       height: 120px;
@@ -41,86 +61,93 @@
       border: 2px dashed #00796b;
       border-radius: 10px;
     }
+    .btn {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn-success {
+      background-color: #28a745;
+      color: white;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: white;
+    }
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    hr{
+    
+      padding-top: 1px;
+      background-color: black;
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2 style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;" class="text-center mb-4">Menu Card</h2>
-    <div class="row g-4">
-  <div class="row g-4">
-      <div class="col-md-4">
-        <div class="item-card" data-price="200">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" alt="Pizza">
-          <h5 class="mt-2">Pizza</h5>
-          <p class="text-muted">Price: 200</p>
-          <button class="btn btn-success w-100 btn-add">Add to Cart</button>
-        </div>
+    <h2>Menu Card</h2>
+    <hr>
+    <div class="row">
+      <div class="item-card" data-price="200">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Pizza-3007395.jpg" alt="Pizza">
+        <h5 class="mt-2">Pizza</h5>
+        <p class="text-muted">Price: 200</p>
+        <button class="btn btn-success w-100 btn-add">Add to Cart</button>
       </div>
-      <div class="col-md-4">
-        <div class="item-card" data-price="130">
-          <img src="https://www.foodandwine.com/thmb/jldKZBYIoXJWXodRE9ut87K8Mag=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg" alt="Burger">
-          <h5 class="mt-2">Burger</h5>
-          <p class="text-muted">Price: 130</p>
-          <button class="btn btn-success w-100 btn-add">Add to Cart</button>
-        </div>
+      <div class="item-card" data-price="130">
+        <img src="https://www.foodandwine.com/thmb/jldKZBYIoXJWXodRE9ut87K8Mag=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg" alt="Burger">
+        <h5 class="mt-2">Burger</h5>
+        <p class="text-muted">Price: 130</p>
+        <button class="btn btn-success w-100 btn-add">Add to Cart</button>
       </div>
-      <div class="col-md-4">
-        <div class="item-card" data-price="90">
-          <img src="https://www.vincenzosplate.com/wp-content/uploads/2021/08/610x350-Photo-4_862-How-to-Make-CHICKEN-PASTA-Like-an-Italian-V1.jpg" alt="Pasta">
-          <h5 class="mt-2">Pasta</h5>
-          <p class="text-muted">Price: 90</p>
-          <button class="btn btn-success w-100 btn-add">Add to Cart</button>
-        </div>
+      <div class="item-card" data-price="90">
+        <img src="https://www.vincenzosplate.com/wp-content/uploads/2021/08/610x350-Photo-4_862-How-to-Make-CHICKEN-PASTA-Like-an-Italian-V1.jpg" alt="Pasta">
+        <h5 class="mt-2">Pasta</h5>
+        <p class="text-muted">Price: 90</p>
+        <button class="btn btn-success w-100 btn-add">Add to Cart</button>
       </div>
-            <div class="col-md-4">
-        <div class="item-card" data-price="50">
-          <img src="https://b3067249.smushcdn.com/3067249/wp-content/uploads/2017/06/French-fries-848x477.jpg?lossy=0&strip=1&webp=1" alt="French Fry">
-          <h5 class="mt-2">French Fry</h5>
-          <p class="text-muted">Price: 50</p>
-          <button class="btn btn-success w-100 btn-add">Add to Cart</button>
-        </div>
+      <div class="item-card" data-price="50">
+        <img src="https://b3067249.smushcdn.com/3067249/wp-content/uploads/2017/06/French-fries-848x477.jpg?lossy=0&strip=1&webp=1" alt="French Fry">
+        <h5 class="mt-2">French Fry</h5>
+        <p class="text-muted">Price: 50</p>
+        <button class="btn btn-success w-100 btn-add">Add to Cart</button>
       </div>
-            <div class="col-md-4">
-        <div class="item-card" data-price="8">
-          <img src="https://fullofplants.com/wp-content/uploads/2020/05/sweet-and-sour-spicy-thai-fried-rice-easy-vegan-meal-with-vegetables-1.jpg" alt="Friend Rice">
-          <h5 class="mt-2">Friend Rice</h5>
-          <p class="text-muted">Price: 100</p>
-          <button class="btn btn-success w-100 btn-add">Add to Cart</button>
-        </div>
+      <div class="item-card" data-price="100">
+        <img src="https://fullofplants.com/wp-content/uploads/2020/05/sweet-and-sour-spicy-thai-fried-rice-easy-vegan-meal-with-vegetables-1.jpg" alt="Friend Rice">
+        <h5 class="mt-2">Friend Rice</h5>
+        <p class="text-muted">Price: 100</p>
+        <button class="btn btn-success w-100 btn-add">Add to Cart</button>
       </div>
-            <div class="col-md-4">
-        <div class="item-card" data-price="8">
-          <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/810cab8c8e2db7d6f71b4a6681a8fa99/Derivates/b37cbe66dd81315b474ae2f36454c02fb1133cba.jpg" alt="Chicken Fry">
-          <h5 class="mt-2">Chiken Fry</h5>
-          <p class="text-muted">Price: 120</p>
-          <button class="btn btn-success w-100 btn-add">Add to Cart</button>
-        </div>
+      <div class="item-card" data-price="120">
+        <img src="https://assets.tmecosys.com/image/upload/t_web_rdp_recipe_584x480_1_5x/img/recipe/ras/Assets/810cab8c8e2db7d6f71b4a6681a8fa99/Derivates/b37cbe66dd81315b474ae2f36454c02fb1133cba.jpg" alt="Chicken Fry">
+        <h5 class="mt-2">Chicken Fry</h5>
+        <p class="text-muted">Price: 120</p>
+        <button class="btn btn-success w-100 btn-add">Add to Cart</button>
       </div>
-            <div class="col-md-4">
-        <div class="item-card" data-price="200">
-          <img src="https://izzycooking.com/wp-content/uploads/2022/05/Grilled-Beef-Steak-2.jpg" alt="Beef Steak">
-          <h5 class="mt-2">Beef Steak</h5>
-          <p class="text-muted">Price: 200</p>
-          <button class="btn btn-success w-100 btn-add">Add to Cart</button>
-        </div>
+      <div class="item-card" data-price="200">
+        <img src="https://izzycooking.com/wp-content/uploads/2022/05/Grilled-Beef-Steak-2.jpg" alt="Beef Steak">
+        <h5 class="mt-2">Beef Steak</h5>
+        <p class="text-muted">Price: 200</p>
+        <button class="btn btn-success w-100 btn-add">Add to Cart</button>
       </div>
-            <div class="col-md-4">
-        <div class="item-card" data-price="110">
-          <img src="https://www.cakenknife.com/wp-content/uploads/2019/05/Spicy-Crispy-Pork-Ramen_3084-768x1154.jpg" alt="Ramen">
-          <h5 class="mt-2">Ramen</h5>
-          <p class="text-muted">Price: 110</p>
-          <button class="btn btn-success w-100 btn-add">Add to Cart</button>
-        </div>
+      <div class="item-card" data-price="110">
+        <img src="https://www.cakenknife.com/wp-content/uploads/2019/05/Spicy-Crispy-Pork-Ramen_3084-768x1154.jpg" alt="Ramen">
+        <h5 class="mt-2">Ramen</h5>
+        <p class="text-muted">Price: 110</p>
+        <button class="btn btn-success w-100 btn-add">Add to Cart</button>
       </div>
-            <div class="col-md-4">
-        <div class="item-card" data-price="50">
-          <img src="https://www.saveur.com/uploads/2007/02/SAVEUR_Mojito_1149-Edit-scaled.jpg?format=auto&optimize=high&width=1440" alt="Pasta">
-          <h5 class="mt-2">Mojito</h5>
-          <p class="text-muted">Price: 50</p>
-          <button class="btn btn-success w-100 btn-add">Add to Cart</button>
-        </div>
+      <div class="item-card" data-price="50">
+        <img src="https://www.saveur.com/uploads/2007/02/SAVEUR_Mojito_1149-Edit-scaled.jpg?format=auto&optimize=high&width=1440" alt="Mojito">
+        <h5 class="mt-2">Mojito</h5>
+        <p class="text-muted">Price: 50</p>
+        <button class="btn btn-success w-100 btn-add">Add to Cart</button>
       </div>
-    </div>
     </div>
 
     <div id="cart" class="mb-2">Cart Items: 0</div>
@@ -169,6 +196,7 @@
       cartCountEl.textContent = `Cart Items: ${cartCount}`;
       totalEl.textContent = `Total Price: ${totalPrice.toFixed(2)}`;
     }
+
     function validateForm() {
       const name = document.getElementById('name').value.trim();
       const phone = document.getElementById('phone').value.trim();
